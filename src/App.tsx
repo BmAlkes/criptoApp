@@ -1,6 +1,13 @@
+import { useEffect, useState } from "react";
 import CryptoSearchForm from "./components/CryptoSearchForm";
+import { useCryptoStore } from "./store/store";
 
 function App() {
+  const { cryptocurrencies } = useCryptoStore();
+
+  useEffect(() => {
+    cryptocurrencies;
+  }, []);
   return (
     <>
       <div className="container">
